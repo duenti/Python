@@ -10,7 +10,6 @@ def check_profanity(text):
 	connection = urllib.urlopen('http://www.wdyl.com/profanity?q=' + text)
 	output = connection.read()
 	connection.close()
-	print(output[14])
 	if(output[14] == 't'):
 		return True
 	return False
